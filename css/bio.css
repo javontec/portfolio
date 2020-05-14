@@ -1,0 +1,166 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: #225470; */
+}
+
+
+/* //////////////////NAV BAR /////////////////*/
+.nav-bar{
+  position: fixed;
+  height:50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-content: flex-start; */
+  right:0;
+  z-index: 5;
+}
+.nav-bckg{
+  /* background-image: url('imgs/bckg01.png'); */
+  /* opacity: .3; */
+  background:rgba(34, 84, 112, .5);
+  transition: all .5s ease-in-out;
+}
+.nav-list{
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  font-family: 'MADE Tommy Soft';
+  margin-left: 50%;
+  width: 50%;
+
+}
+.nav-list li{
+  color: #fff;
+  text-decoration: none;
+}
+/* ///////////////CONTAINER /////////////////*/
+.container{
+  height: 100vh;
+  width: 100vw;
+  /* border: solid #000 1px; */
+  background: #225470;
+}
+.overlay{
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  /* z-index:1; */
+  /* background:rgb(255,192,203); */
+  opacity:0.65;
+}
+/*/////////////////// ABOUT SECTION ///////////*/
+.about-section{
+  background: url('../imgs/showcase-img.jpg') no-repeat top left;
+  background-size: 55%;
+  background-color: #225470;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 100px;
+  padding: 100px 0 0 100px;
+}
+
+.inner-container{
+  width: 55%;
+  height:500px;
+  float: right;
+  background-image: linear-gradient( #225470, #ffc0cb);
+  padding: 150px;
+  overflow-y: scroll;
+}
+
+.inner-container::-webkit-scrollbar{
+  height: 13px;
+}
+
+.inner-container::-webkit-scrollbar-track {
+  background-color: #225470
+}
+
+.inner-container::-webkit-scrollbar-thumb{
+  background-image: linear-gradient( #225470, #ffc0cb);
+  border: solid #000 1.5px;
+  border-radius: 3px;
+}
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 50px;
+  text-align: justify;
+  line-height: 30px;
+  font-family: 'sweet purple';
+}
+.inner-container h2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: justify;
+  line-height: 30px;
+  font-family: 'sweet purple';
+}
+.text{
+  font-size: 13px;
+  line-height: 30px;
+  text-align: justify;
+  font-family: 'MADE Tommy Soft';
+  /* overflow:scroll; */
+}
+
+/*////////////////////// MEDIA //////////////////*/
+
+@media screen and (max-width:1700px){
+  .inner-container{
+    padding: 40px 80px 20px 80px;
+  }
+}
+
+@media screen and (max-width:1200px){
+  .inner-container{
+    /* padding: 80px; */
+    padding: 100px 40px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .about-section{
+    background-size: 100%;
+  }
+  .inner-container{
+    padding: 50px;
+  }
+}
+@media screen and (max-width:765px){
+  .inner-container{
+    padding: 25px;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width:540px){
+  .about-section{
+   background: transparent;
+   padding-left: 0;
+  }
+  .inner-container{
+    width: 100%;
+    height: 100%;
+    padding: 10;
+    overflow: hidden;
+  }
+  .nav-list{
+    width: 100%;
+    margin-left: 0;
+  }
+}
